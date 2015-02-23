@@ -1,5 +1,6 @@
 package Log4j_test;
 
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -7,10 +8,12 @@ public class InfoProcessor {
     private final Logger logger;
 
     public InfoProcessor() {
-        logger = LogManager.getLogger(InfoProcessor.class);
+        logger = LogManager.getLogger();
     }
 
     public void run(String str) {
+        logger.entry(str);
+
         logger.debug("I'm doing science and I'm still alive.");
         logger.info("I feel fantastic and I'm still alive.");
         logger.warn("While you're dying I'll be still alive.");
@@ -22,5 +25,7 @@ public class InfoProcessor {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        logger.exit();
     }
 }
