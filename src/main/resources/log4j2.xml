@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="Console" target="System.out">
+            <PatternLayout pattern="%d{ISO8601} %-5p [%c{1}] - %m%n"/>
+        </Console>
+
+        <File name="file" fileName="logs/log1.log">
+            <PatternLayout pattern="%d{ISO8601} %-5p [%c{1}] - %m%n"/>
+        </File>
+
+        <File name="file2" fileName="logs/log2.log">
+            <MarkerFilter marker="fileonly" onMatch="DENY" onMismatch="ACCEPT"/>
+            <PatternLayout pattern="%d{ISO8601} %-5p [%c{1}] - %m%n"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="file" level="DEBUG"/>
+        </Root>
+
+        <Logger name="logging.log4j.LoggingLog4j" level="info" additivity="false">
+            <AppenderRef ref="file2" level="INFO"/>
+        </Logger>
+    </Loggers>
+</Configuration>
