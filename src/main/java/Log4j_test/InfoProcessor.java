@@ -11,7 +11,7 @@ public class InfoProcessor {
     }
 
     public void run(String str) {
-        logger.entry(str));
+        logger.entry(str);
 
         logger.debug("I'm doing science and I'm still alive.");
         logger.info("I feel fantastic and I'm still alive.");
