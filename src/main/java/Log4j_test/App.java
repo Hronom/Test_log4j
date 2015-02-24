@@ -12,5 +12,13 @@ public class App {
 
         InfoProcessor infoProcessor = new InfoProcessor();
         infoProcessor.run("Hello World!");
+
+        Thread[] worker = new Thread[3];
+        MyRunnable r = new MyRunnable();
+
+        for (int i = 0; i < 3; i++) {
+            worker[i] = new Thread(r);
+            worker[i].start();
+        }
     }
 }

@@ -2,11 +2,11 @@
 <Configuration>
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <PatternLayout pattern="%d{ISO8601} %-5p [%t] %logger{36} - %m%n"/>
         </Console>
 
         <File name="file" fileName="logs/log1.log">
-            <PatternLayout pattern="%d{ISO8601} %-5p [%c{1}] - %m%n"/>
+            <PatternLayout pattern="%d{ISO8601} %-5p [%t] %logger{36} - %m%n"/>
         </File>
 
         <File name="file2" fileName="logs/log2.log">
@@ -18,9 +18,10 @@
     <Loggers>
         <Root level="all">
             <AppenderRef ref="Console"/>
+            <AppenderRef ref="file"/>
         </Root>
         <!--<Root level="trace">-->
-            <!--<AppenderRef ref="file" level="DEBUG"/>-->
+        <!--<AppenderRef ref="file" level="DEBUG"/>-->
         <!--</Root>-->
 
         <Logger name="Log4j_test.InfoProcessor" level="info" additivity="false">
@@ -28,7 +29,7 @@
         </Logger>
 
         <!--<Logger name="Console_logger" level="error">-->
-            <!--<AppenderRef ref="console"/>-->
+        <!--<AppenderRef ref="console"/>-->
         <!--</Logger>-->
     </Loggers>
 </Configuration>
