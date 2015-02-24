@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 public class App {
     public static void main(String[] args) {
         Logger logger = LogManager.getLogger();
+        logger.info("App start");
 
         InfoProcessor infoProcessor = new InfoProcessor();
         infoProcessor.run("Hello World!");
