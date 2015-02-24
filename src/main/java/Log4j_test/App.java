@@ -21,5 +21,7 @@ public class App {
             worker[i] = new Thread(r);
             worker[i].start();
         }
+
+        logger.info("App stop");
     }
 }
