@@ -1,4 +1,4 @@
-package Log4j_test;
+package Test_log4j;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

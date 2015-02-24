@@ -3,12 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>Log4j_test</groupId>
-    <artifactId>Log4j_test</artifactId>
+    <groupId>Test_log4j</groupId>
+    <artifactId>Test_log4j</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>Log4j_test</name>
+    <name>Test_log4j</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -97,7 +97,7 @@
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>/lib</classpathPrefix>
                             <classpathLayoutType>simple</classpathLayoutType>
-                            <mainClass>Log4j_test.App</mainClass>
+                            <mainClass>Test_log4j.App</mainClass>
                         </manifest>
                         <manifestEntries>
                             <Version>${project.version}</Version>

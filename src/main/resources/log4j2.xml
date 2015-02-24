@@ -24,7 +24,7 @@
         <!--<AppenderRef ref="file" level="DEBUG"/>-->
         <!--</Root>-->
 
-        <!--<Logger name="Log4j_test.InfoProcessor" level="info" additivity="false">-->
+        <!--<Logger name="Test_log4j.InfoProcessor" level="info" additivity="false">-->
             <!--<AppenderRef ref="file2" level="ALL"/>-->
         <!--</Logger>-->
 

@@ -1,4 +1,4 @@
-package Log4j_test;
+package Test_log4j;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
